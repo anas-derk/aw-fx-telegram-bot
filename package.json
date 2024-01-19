@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "dotenv": "^16.3.2",
+    "node-telegram-bot-api": "^0.64.0"
+  }
+}
