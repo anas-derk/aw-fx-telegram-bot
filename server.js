@@ -9,6 +9,10 @@ const channelIds = [
     "@metaverse00",
 ];
 
+const adminIds = [
+    956003083,
+];
+
 bot.onText(/\/start/, async (msg) => {
     try{
         await bot.sendMessage(msg.chat.id, "مرحباً بك في البوت الخاص بنا");
@@ -20,7 +24,7 @@ bot.onText(/\/start/, async (msg) => {
 
 bot.on("message", async (msg) => {
     try{
-        if (msg.from.id === parseInt(process.env.adminId)) {
+        if (adminIds.includes(msg.from.id)) {
             if (msg.text !== "/start") {
                 for(let i = 0; i < channelIds.length; i++) {
                     await bot.sendMessage(channelIds[i], msg.text);
