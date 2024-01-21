@@ -11,7 +11,6 @@ const channelIds = [
 
 const adminIds = [
     956003083,
-    956003083,
 ];
 
 bot.onText(/\/start/, async (msg) => {
