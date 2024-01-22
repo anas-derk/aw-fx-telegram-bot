@@ -7,10 +7,12 @@ const bot = new TelegramBot(process.env.telegramBotToken, { polling: true });
 const channelIds = [
     "@ebnelahdall",
     "@metaverse00",
+    
 ];
 
 const adminIds = [
     956003083,
+    5291202137,
 ];
 
 bot.onText(/\/start/, async (msg) => {
