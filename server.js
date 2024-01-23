@@ -11,6 +11,7 @@ const channelIds = [
     "@awfx4",
     "@awfx6",
     "@awfx7",
+    "@awfx8",
     
 ];
 
