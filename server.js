@@ -5,8 +5,12 @@ const TelegramBot = require('node-telegram-bot-api');
 const bot = new TelegramBot(process.env.telegramBotToken, { polling: true });
 
 const channelIds = [
-    "@ebnelahdall",
-    "@metaverse00",
+    "@awfx0",
+    "@awfx1",
+    "@awfx3",
+    "@awfx4",
+    "@awfx6",
+    "@awfx7",
     
 ];
 
