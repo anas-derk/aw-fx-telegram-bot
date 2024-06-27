@@ -43,6 +43,7 @@ bot.on("message", async (msg) => {
         } else await bot.sendMessage(msg.chat.id, "عذراً أنت لا تمتلك الصلاحية لكتابة منشور في  البوت");
     }
     catch(err) {
+        console.log(err);
         await bot.sendMessage(msg.chat.id, "عذراً حدث خطأ أثناء المعالجة ، الرجاء إعادة المحاولة  !!");
     }
 });
