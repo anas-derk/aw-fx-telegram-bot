@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@google/generative-ai": "^0.14.0",
     "dotenv": "^16.3.2",
     "node-telegram-bot-api": "^0.64.0"
   }

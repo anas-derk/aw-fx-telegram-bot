@@ -20,6 +20,17 @@ const adminIds = [
     5291202137,
 ];
 
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
+
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
+
+async function generateContentByGeminiModel(prompt) {
+    const result = await model.generateContent(prompt);
+    return (await result.response).text();
+}
+
 bot.onText(/\/start/, async (msg) => {
     try{
         await bot.sendMessage(msg.chat.id, "مرحباً بك في البوت الخاص بنا");
@@ -34,7 +45,7 @@ bot.on("message", async (msg) => {
         if (adminIds.includes(msg.from.id)) {
             if (msg.text !== "/start") {
                 for(let i = 0; i < channelIds.length; i++) {
-                    await bot.sendMessage(channelIds[i], msg.text);
+                    await bot.sendMessage(channelIds[i], generateContentByGeminiModel(`اعد لي صياغة النص التالي: "${msg.text}"`));
                 }
             }
         } else await bot.sendMessage(msg.chat.id, "عذراً أنت لا تمتلك الصلاحية لكتابة منشور في  البوت");
