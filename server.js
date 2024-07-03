@@ -6,10 +6,12 @@ const bot = new TelegramBot(process.env.telegramBotToken, { polling: true });
 
 const channelIds = [
     "@awfxtradingplatform",
+    "@alfafx0", 
 ];
 
 const adminIds = [
     956003083,
+    6666577780,
 ];
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
