@@ -7,6 +7,11 @@ const bot = new TelegramBot(process.env.telegramBotToken, { polling: true });
 const channelIds = [
     "@awfxtradingplatform",
     "@alfafx0", 
+    "@awfx0", 
+    "@awfx1",
+    "@awfx3", 
+    "@awfx4", 
+    "@awfx5", 
 ];
 
 const adminIds = [
